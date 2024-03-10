@@ -20,6 +20,7 @@ struct AppetizerListView: View {
                             .foregroundStyle(.secondary)
                             .fontWeight(.semibold)
                     }
+                    .padding(.leading)
                 }
             }
             .navigationTitle("🍟 Appetizers")
