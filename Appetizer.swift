@@ -1,7 +1,10 @@
 import Foundation
 
-struct Appetizer: Decodable {
+struct AppetizerRequest {
+    let request: [Appetizer]
+}
 
+struct Appetizer: Decodable {
     let imageURL: String
     let name: String
     let description: String
