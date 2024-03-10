@@ -25,4 +25,11 @@ struct MockData {
                                            price: 8.99,
                                            carbs: 0,
                                            calories: 300)
+
+    static let appetizer = [
+        sampleAppetizer,
+        sampleAppetizer,
+        sampleAppetizer,
+        sampleAppetizer
+    ]
 }
