@@ -33,6 +33,11 @@ final class NetworkManager {
                 completion(.failure(.invalidResponse))
                 return
             }
+
+            guard let data = data else {
+                completion(.failure(.invalidData))
+                return
+            }
         }
     }
 }
