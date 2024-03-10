@@ -6,7 +6,7 @@ final class NetworkManager {
 
     static let shared = NetworkManager()
     static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals"
-    static let appetizersURL = baseURL + "/appetizers"
+    private let appetizersURL = baseURL + "/appetizers"
 
     // MARK: - Init
 
@@ -14,5 +14,11 @@ final class NetworkManager {
 
     // MARK: - Methods
 
-    func loadData(completion: @escaping (Result<[Appetizer], APError>) -> Void) {}
+    func loadData(completion: @escaping (Result<[Appetizer], APError>) -> Void) {
+
+        guard let url = URL(string: appetizersURL) else {
+            completion(.failure(.invalidURL))
+            return
+        }
+    }
 }
