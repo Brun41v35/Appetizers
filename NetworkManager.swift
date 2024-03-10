@@ -14,5 +14,5 @@ final class NetworkManager {
 
     // MARK: - Methods
 
-    func loadData(completion: @escaping (Result<[Appetizer], Error>) -> Void) {}
+    func loadData(completion: @escaping (Result<[Appetizer], APError>) -> Void) {}
 }
