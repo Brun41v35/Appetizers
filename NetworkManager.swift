@@ -27,6 +27,12 @@ final class NetworkManager {
                 completion(.failure(.unableToComplete))
                 return
             }
+
+            guard let response = response as? HTTPURLResponse,
+                  response.statusCode == 200 else {
+                completion(.failure(.invalidResponse))
+                return
+            }
         }
     }
 }
