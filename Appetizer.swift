@@ -1,6 +1,6 @@
 import Foundation
 
-struct Appetizer: Codable {
+struct Appetizer: Decodable {
 
     let imageURL: String
     let name: String
