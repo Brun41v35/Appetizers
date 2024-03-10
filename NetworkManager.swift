@@ -38,6 +38,15 @@ final class NetworkManager {
                 completion(.failure(.invalidData))
                 return
             }
+
+            do {
+                let decoder = JSONDecoder()
+                let decodedResponse = try decoder.decode(AppetizerRequest.self, from: data)
+                completion(.success(decodedResponse.request))
+            } catch {
+                completion(.failure(.invalidData))
+            }
         }
+        task.resume()
     }
 }
