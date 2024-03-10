@@ -4,7 +4,7 @@ struct AppetizerRequest {
     let request: [Appetizer]
 }
 
-struct Appetizer: Decodable {
+struct Appetizer: Decodable, Identifiable {
     let imageURL: String
     let name: String
     let description: String
