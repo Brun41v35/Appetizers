@@ -20,5 +20,13 @@ final class NetworkManager {
             completion(.failure(.invalidURL))
             return
         }
+
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+
+            guard let _ = error else {
+                completion(.failure(.unableToComplete))
+                return
+            }
+        }
     }
 }
