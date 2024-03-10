@@ -1,6 +1,6 @@
 import Foundation
 
-struct AppetizerRequest {
+struct AppetizerRequest: Decodable {
     let request: [Appetizer]
 }
 
