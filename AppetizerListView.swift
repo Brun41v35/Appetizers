@@ -21,11 +21,13 @@ struct AppetizerListView: View {
 
     func getAppetizers() {
         NetworkManager.shared.loadData { result in
-            switch result {
-            case .success(let appetizers):
-                self.appetizer = appetizer
-            case .failure(let failure):
-                print(failure)
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let appetizers):
+                    self.appetizer = appetizer
+                case .failure(let failure):
+                    print(failure)
+                }
             }
         }
     }
