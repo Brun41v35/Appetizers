@@ -23,7 +23,7 @@ struct AppetizerListView: View {
         NetworkManager.shared.loadData { result in
             switch result {
             case .success(let appetizers):
-                print(appetizers)
+                self.appetizer = appetizer
             case .failure(let failure):
                 print(failure)
             }
