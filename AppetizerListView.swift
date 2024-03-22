@@ -16,7 +16,7 @@ struct AppetizerListView: View {
             .navigationTitle("🍟 Appetizers")
         }
         .onAppear {
-            getAppetizers()
+            viewModel.getAppetizers()
         }
     }
 }
