@@ -4,6 +4,7 @@ struct AppetizerListView: View {
 
     // MARK - State Properties
 
+    @StateObject var viewModel = AppetizerListViewModel()
     @State private var appetizer: [Appetizer] = []
 
     // MARK: - Body
